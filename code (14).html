@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Application Review | RNS Finance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "outline": "#737780",
+                        "on-surface-variant": "#43474f",
+                        "tertiary-fixed-dim": "#66df75",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "secondary": "#735c00",
+                        "on-secondary-fixed": "#241a00",
+                        "background": "#f8f9fa",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-dim": "#d9dadb",
+                        "outline-variant": "#c3c6d1",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed": "#001b3c",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#799dd6",
+                        "on-tertiary-fixed": "#002106",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#745c00",
+                        "surface-container": "#edeeef",
+                        "error": "#ba1a1a",
+                        "primary-container": "#003366",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#00531a",
+                        "inverse-primary": "#a7c8ff",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#191c1d",
+                        "primary": "#001e40",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#3a5f94",
+                        "tertiary-fixed": "#83fc8e",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#36b24e",
+                        "tertiary-container": "#003d11",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#002507",
+                        "surface-variant": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter h-16 max-w-container-max-width mx-auto bg-surface shadow-sm">
+<div class="text-headline-md font-headline-md font-bold text-primary">RNS Finance</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-4">
+<span class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors cursor-pointer">Dashboard</span>
+<span class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md cursor-pointer">Applications</span>
+<span class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors cursor-pointer">EMI Tracking</span>
+<span class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors cursor-pointer">Settings</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="account_circle">account_circle</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md">Apply Now</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 p-4 w-64 bg-surface-container-low border-r border-outline-variant pt-20">
+<div class="mb-8 px-2">
+<div class="text-headline-md font-headline-md font-bold text-primary">RNS Portal</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Secure Session</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container font-bold rounded-lg scale-98 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body-md text-body-md">Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-body-md text-body-md">EMI Tracking</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-body-md text-body-md">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 pt-20 pb-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max-width mx-auto">
+<!-- Breadcrumbs & Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<nav class="flex text-label-sm font-label-sm text-outline mb-2">
+<span>Applications</span>
+<span class="mx-2">/</span>
+<span class="text-primary">Review: APP-92834</span>
+</nav>
+<h1 class="text-headline-lg font-headline-lg text-primary">Application Review</h1>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 border border-error text-error rounded-lg font-label-md text-label-md hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+                        Reject
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 border border-outline text-on-surface-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+    Download as PDF
+</button><button class="flex items-center gap-2 px-6 py-3 bg-tertiary-fixed-dim text-on-tertiary-fixed border border-tertiary-container rounded-lg font-label-md text-label-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+                        Approve
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column: Personal Information & Documents -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<!-- Applicant Detail Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant">
+<h2 class="text-headline-md font-headline-md text-primary-container mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                            Personal Information
+                        </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1">Full Name</label>
+<p class="text-body-md font-body-md font-medium">Rajesh Kumar Sharma</p>
+</div>
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1">Email Address</label>
+<p class="text-body-md font-body-md font-medium">rajesh.sharma@example.com</p>
+</div>
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1">Contact Number</label>
+<p class="text-body-md font-body-md font-medium">+91 98765 43210</p>
+</div>
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1">Occupation</label>
+<p class="text-body-md font-body-md font-medium">Senior Software Engineer</p>
+</div>
+<div class="md:col-span-2">
+<label class="text-label-sm font-label-sm text-outline block mb-1">Permanent Address</label>
+<p class="text-body-md font-body-md font-medium">124, Green View Apartments, Sector 45, Gurgaon, Haryana - 122003</p>
+</div>
+</div>
+</div>
+<!-- Documents Section -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant">
+<h2 class="text-headline-md font-headline-md text-primary-container mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+                            Verification Documents
+                        </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Aadhar Card -->
+<div class="group cursor-zoom-in relative">
+<label class="text-label-sm font-label-sm text-outline block mb-3">Aadhar Card (Front &amp; Back)</label>
+<div class="aspect-video bg-surface-container-high rounded-lg overflow-hidden border border-outline-variant relative">
+<img alt="Aadhar Card Document" class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0" data-alt="A professional high-resolution photograph of a standard government identification card lying on a clean white desk. The lighting is bright and even, emphasizing clarity and security. The surrounding environment is a modern corporate office, with soft blue and grey tones dominating the background, creating a mood of institutional trust and meticulous document verification." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGwvErrL-K6-wWs9xTFLsuxLsYvR5Ku9X_SNSscY7I6jZdMqd7I1f0ww1hSjl5ooibWERlKkGp4R5Y-FzM_EIdxlVNkWuv_UCsXoPPz88bjy8QTBvkuSDA-whIWAZ0n7eMDu35anoetBVCjmqs8c-jOXLG3ejqs2nBFzIpgv-U9G__1SGCsOmgmHGxJ1DaqJ_He_uMwCZWZ2LqFXSH2W4vNZI5hxn7OmnzQglV6cSfUFP-IvZbA2Ze30q0mhl5onAmmUTatsjjSQ"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-surface text-primary px-3 py-1 rounded-full text-label-sm font-label-sm shadow-sm">View Fullscreen</span>
+</div>
+</div>
+</div>
+<!-- PAN Card -->
+<div class="group cursor-zoom-in relative">
+<label class="text-label-sm font-label-sm text-outline block mb-3">PAN Card</label>
+<div class="aspect-video bg-surface-container-high rounded-lg overflow-hidden border border-outline-variant relative">
+<img alt="PAN Card Document" class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0" data-alt="A macro photograph of an official tax identification card with high-quality printing, showcasing intricate security patterns and holographic elements. The card is positioned on a professional leather-bound folder under soft, cool-toned office light. The aesthetic is clean and corporate, utilizing a palette of deep blues and silvers to convey a sense of rigorous financial audit and legal compliance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpBcZ7GGucUSsZo50cbtPqgb6nAlC9JXDuQ7vQXPk-dXUt0R1VwCRxw4uo8qiZ9JPWa00cTh35h6ppDs7IMrARQQ99eZwxT-5iSfPU9dQsd44iTnVjUJZxexWpTZAk4A6MWfFZKx6i7pJDjaEfGf4HWob-sh_FEee0Icyh8Om1nbCqkAIay02QSQMgnRljTBcX46cg4CdMMIM2P1-lB3Bg84H5u34qeubsdDsSScDQYzqOzcYYdhuifCS7ciIBswm3NfCE97ZURQ"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-surface text-primary px-3 py-1 rounded-full text-label-sm font-label-sm shadow-sm">View Fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</div><div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant">
+<h2 class="text-headline-md font-headline-md text-primary-container mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+        Self-Declaration
+    </h2>
+<div class="p-4 bg-surface-container rounded-lg border-l-4 border-primary">
+<p class="text-body-md font-body-md font-bold text-primary">
+            डैं णुडरूणल ररतल हूँ कर डैं रतने णूरे हुश-ओ-हवलस डें डह लुन ले रहल हूँ। इस णुरकुूणल डें डुक णर कुई ऑलुर-ऑललरलुरी नहीं की गई है। डदर डैं सडड णर लुन कल णुगतलन नहीं कर णलडल, तु डेरे वलरुदुध कलनूनी णुरकुूणल शुरू की ऑल सकती है।
+        </p>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant">
+<label class="text-label-sm font-label-sm text-outline block mb-3">Applicant Digital Signature</label>
+<div class="w-full md:w-1/2 aspect-[3/1] bg-surface-container-high rounded-lg overflow-hidden border border-outline-variant relative group">
+<div class="w-full h-full flex items-center justify-center bg-white p-4">
+<span class="text-4xl font-serif italic text-primary/40 select-none">Rajesh Sharma</span>
+</div>
+<div class="absolute inset-0 bg-primary/5 flex items-center justify-end p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="bg-surface text-primary px-3 py-1 rounded-full text-label-sm font-label-sm shadow-sm">Verified Digital Signature</span>
+</div>
+</div>
+<p class="mt-2 text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified">verified</span>
+        Digitally signed on 12 Oct 2024, 14:25 IST
+    </p>
+</div></div>
+</div>
+<!-- Right Column: EMI Setup & Transaction History -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<!-- EMI Setup Panel -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-2 border-secondary-container ring-4 ring-secondary-container/10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-headline-md font-headline-md text-primary">EMI Setup</h2>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-label-sm font-bold">REQUIRED</span>
+</div>
+<div class="space-y-4">
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-2">Loan Amount (Requested)</label>
+<div class="text-headline-md font-bold text-primary">₹ 5,00,000</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="emi-amount">Monthly EMI Amount (₹)</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary text-body-md outline-none" id="emi-amount" type="number" value="22500"/>
+</div>
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="installments">Number of Installments</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary text-body-md outline-none" id="installments">
+<option value="12">12 Months</option>
+<option selected="" value="24">24 Months</option>
+<option value="36">36 Months</option>
+<option value="48">48 Months</option>
+</select>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="flex justify-between items-center mb-1">
+<span class="text-label-sm font-label-sm text-outline">Interest Rate (Fixed)</span>
+<span class="text-label-sm font-label-sm font-bold text-secondary">8.5% p.a.</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-label-sm font-label-sm text-outline">Processing Fee</span>
+<span class="text-label-sm font-label-sm font-bold text-primary">₹ 2,500</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold hover:shadow-md transition-all">Confirm EMI Plan</button>
+</div>
+</div>
+<!-- Manual Verification Panel -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant">
+<h2 class="text-headline-md font-headline-md text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                            Installments
+                        </h2>
+<div class="space-y-3">
+<!-- Installment Item -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low border border-outline-variant">
+<div>
+<p class="text-body-sm font-bold">1st Installment</p>
+<p class="text-label-sm text-outline">Due: 15 Oct 2024</p>
+</div>
+<button class="flex items-center gap-1 bg-tertiary-container text-on-tertiary-container px-3 py-1.5 rounded-lg text-label-sm font-bold hover:opacity-90">
+<span class="material-symbols-outlined scale-75" data-icon="done_all">done_all</span>
+                                    Mark Paid
+                                </button>
+</div>
+<!-- Installment Item -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low border border-outline-variant">
+<div>
+<p class="text-body-sm font-bold">2nd Installment</p>
+<p class="text-label-sm text-outline">Due: 15 Nov 2024</p>
+</div>
+<button class="flex items-center gap-1 bg-tertiary-container text-on-tertiary-container px-3 py-1.5 rounded-lg text-label-sm font-bold hover:opacity-90">
+<span class="material-symbols-outlined scale-75" data-icon="done_all">done_all</span>
+                                    Mark Paid
+                                </button>
+</div>
+<!-- Installment Item -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low border border-outline-variant opacity-60">
+<div>
+<p class="text-body-sm font-bold">3rd Installment</p>
+<p class="text-label-sm text-outline">Due: 15 Dec 2024</p>
+</div>
+<span class="text-label-sm font-bold text-outline uppercase px-2">Upcoming</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 px-gutter mt-auto flex flex-col items-center gap-4 text-center bg-surface-container-highest border-t border-outline-variant">
+<div class="text-label-md font-label-md font-bold text-primary">RNS Finance</div>
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 max-w-2xl">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sikta Kubersthan Padrauna Kushinagar Uttar Pradesh 27303</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">7668273774</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">rnsgpl1316@gmail.com</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 RNS Finance. All rights reserved.</p>
+</footer>
+</body></html>

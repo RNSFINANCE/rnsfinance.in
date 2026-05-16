@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Apply for Finance - RNS Finance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "outline": "#737780",
+                        "on-surface-variant": "#43474f",
+                        "tertiary-fixed-dim": "#66df75",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "secondary": "#735c00",
+                        "on-secondary-fixed": "#241a00",
+                        "background": "#f8f9fa",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-dim": "#d9dadb",
+                        "outline-variant": "#c3c6d1",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed": "#001b3c",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#799dd6",
+                        "on-tertiary-fixed": "#002106",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#745c00",
+                        "surface-container": "#edeeef",
+                        "error": "#ba1a1a",
+                        "primary-container": "#003366",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#00531a",
+                        "inverse-primary": "#a7c8ff",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#191c1d",
+                        "primary": "#001e40",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#3a5f94",
+                        "tertiary-fixed": "#83fc8e",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#36b24e",
+                        "tertiary-container": "#003d11",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#002507",
+                        "surface-variant": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom number input hide arrows */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 max-w-container-max-width mx-auto bg-surface shadow-sm">
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md font-bold text-primary">RNS Finance</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md" href="#">Applications</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">EMI Tracking</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</button>
+<button class="hidden md:block bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all">Apply Now</button>
+</div>
+</nav>
+<main class="flex-grow pt-24 pb-12 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto w-full">
+<!-- Progress Indicator -->
+<div class="mb-10">
+<div class="flex justify-between items-center mb-4">
+<h1 class="text-headline-md font-headline-md text-primary">Apply for Finance (ऋण के लिए आवेदन)</h1>
+<span class="text-label-md font-label-md text-on-surface-variant">Step 2 of 3</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-2/3"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-label-sm font-label-sm text-outline">Basic Details</span>
+<span class="text-label-sm font-label-sm text-primary font-bold">Identity &amp; Info</span>
+<span class="text-label-sm font-label-sm text-outline">Verification</span>
+</div>
+</div>
+<!-- Application Form Content -->
+<div class="space-y-8">
+<!-- Personal & Contact Information -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<h2 class="text-headline-md font-headline-md">Personal Details (व्यक्तिगत विवरण)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Full Name (पूरा नाम)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Mobile Number (मोबाइल नंबर)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="+91 00000 00000" type="tel"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Date of Birth (जन्म तिथि)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" type="date"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Gender (लिंग)</label>
+<select class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none appearance-none">
+<option value="">Select Gender</option>
+<option value="male">Male (पुरुष)</option>
+<option value="female">Female (महिला)</option>
+<option value="other">Other (अन्य)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Marital Status (वैवाहिक स्थिति)</label>
+<select class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none appearance-none">
+<option value="">Select Status</option>
+<option value="single">Single (अविवाहित)</option>
+<option value="married">Married (विवाहित)</option>
+<option value="divorced">Divorced (तलाक़शुदा)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Email ID (ईमेल आईडी)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="example@mail.com" type="email"/>
+</div>
+<div class="space-y-1 md:col-span-2">
+<label class="block text-label-md font-label-md text-on-surface-variant">Full Address (पूरा पता)</label>
+<textarea class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Enter your residential address" rows="2"></textarea>
+</div>
+</div>
+</section>
+<!-- Employment & Income Section -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<h2 class="text-headline-md font-headline-md">Employment &amp; Income (रोजगार और आय)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Occupation Type (व्यवसाय का प्रकार)</label>
+<select class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none appearance-none">
+<option value="">Select Type</option>
+<option value="salaried">Salaried (वेतनभोगी)</option>
+<option value="self-employed">Self-Employed (स्वरोजगार)</option>
+<option value="professional">Professional (पेशेवर)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Monthly Income (मासिक आय)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">₹</span>
+<input class="w-full p-3 pl-8 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Company/Business Name (कंपनी/व्यवसाय का नाम)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Enter company name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Work Experience (कार्य अनुभव)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Years" type="number"/>
+</div>
+</div>
+</section>
+<!-- Identity Verification -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+<h2 class="text-headline-md font-headline-md">Identity Details (पहचान विवरण)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">PAN Card Number (पैन कार्ड नंबर)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none uppercase" placeholder="ABCDE1234F" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Aadhar Card Number (आधार कार्ड नंबर)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="XXXX XXXX XXXX" type="text"/>
+</div>
+</div>
+</section>
+<!-- Bank Details Section -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<h2 class="text-headline-md font-headline-md">Bank Details (बैंक विवरण)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Bank Name (बैंक का नाम)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Enter bank name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Account Number (खाता संख्या)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Enter account number" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">IFSC Code</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none uppercase" placeholder="SBIN0001234" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-label-md font-label-md text-on-surface-variant">Branch Name (शाखा का नाम)</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-body-md font-body-md outline-none" placeholder="Enter branch name" type="text"/>
+</div>
+</div>
+</section>
+<!-- Upload Section -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+<h2 class="text-headline-md font-headline-md">Document Uploads (दस्तावेज़ अपलोड)</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Profile Pic -->
+<div class="flex flex-col items-center p-4 border-2 border-dashed border-outline-variant rounded-xl hover:border-primary transition-colors group cursor-pointer h-full justify-center">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="add_a_photo" style="font-size: 28px;">add_a_photo</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface text-center">Profile Picture</span>
+<span class="text-label-sm font-label-sm text-outline">JPG or PNG</span>
+</div>
+<!-- Aadhar Photo -->
+<div class="flex flex-col items-center p-4 border-2 border-dashed border-outline-variant rounded-xl hover:border-primary transition-colors group cursor-pointer relative overflow-hidden min-h-[140px] justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="Aadhar card verification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANcwPx0fBk2OWhjuw4e92fpamMgcJrT-VkCfrbPsR2DTslOqz1lFzjaBgLhC8iV8TL5egVKAzGj18iFIM7Fb2fPLhBFJ9xDvR-3ePPC4ThVDkAAwDIG7lz2GdWVPHl9lZLhA7pTqlGCSCMaqPrr-7v_MNbp2ZtpnJDaHeyTgSSR14EPWCm2TRRnjAASQeQ-B9U6gKOJSBhouWr_lJc-aRY_pbbG7x2_eIZ9K2fvOBHnadzmyo_2UC_YIgVkDlDuPXBY4Gk7qF0ag"/>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary mb-2" data-icon="id_card">id_card</span>
+<span class="text-label-md font-label-md text-on-surface text-center">Aadhar Card</span>
+<span class="text-label-sm font-label-sm text-outline">Front &amp; Back</span>
+</div>
+<!-- PAN Photo -->
+<div class="flex flex-col items-center p-4 border-2 border-dashed border-outline-variant rounded-xl hover:border-primary transition-colors group cursor-pointer relative overflow-hidden min-h-[140px] justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="PAN card verification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQsnJjhnNTr_b2dFrWaGThkqrlPvSZPlkUn5X-SQJK0mUr82HLNlcsAVVKPnpz21rWw_7_EXGG2LqaCJdLGghXN3VvJol3hbe6rQ0SKv1281XK9sCnVuA2akjDzr4hTAcfuZoRCydBgy1rn9MZ4ho8psxx_qJjJFQw8ODRVtzp6d75RYRETAHwgXUzicLAZar_AitJdeE9Le4J4RCJCB4KbrOAjXtbMbWzK1sAykG5fVNSZ1bzy4rUHqJ9KuMXCrZxZvpo0R29w"/>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary mb-2" data-icon="contact_page">contact_page</span>
+<span class="text-label-md font-label-md text-on-surface text-center">PAN Card</span>
+<span class="text-label-sm font-label-sm text-outline">Clear View</span>
+</div>
+<!-- Salary Slips -->
+<div class="flex flex-col items-center p-4 border-2 border-dashed border-outline-variant rounded-xl hover:border-primary transition-colors group cursor-pointer h-full justify-center">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary mb-2" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-md font-label-md text-on-surface text-center">Salary Slips / Income Proof (वेतन पर्ची)</span>
+<span class="text-label-sm font-label-sm text-outline text-center">Last 3 months (PDF/Image)</span>
+</div>
+<!-- Bank Statement -->
+<div class="flex flex-col items-center p-4 border-2 border-dashed border-outline-variant rounded-xl hover:border-primary transition-colors group cursor-pointer h-full justify-center">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary mb-2" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-label-md font-label-md text-on-surface text-center">Bank Statement (बैंक स्टेटमेंट)</span>
+<span class="text-label-sm font-label-sm text-outline text-center">Last 6 months (PDF)</span>
+</div>
+</div>
+</section>
+<!-- Navigation Buttons -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-4">
+<button class="w-full md:w-auto px-8 py-3 border border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+                Back (पीछे)
+            </button>
+<div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+<button class="w-full md:w-auto px-8 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-label-md text-label-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                    Save Draft
+                </button>
+<button class="w-full md:w-auto px-12 py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 shadow-md transition-all flex items-center justify-center gap-2">
+                    Next Step (अगला चरण)
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 px-gutter mt-auto flex flex-col items-center gap-4 text-center bg-surface-container-highest border-t border-outline-variant">
+<div class="text-label-md font-label-md font-bold text-primary">RNS Finance</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-2 max-w-2xl">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sikta Kubersthan Padrauna Kushinagar Uttar Pradesh 27303</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">7668273774</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">rnsgpl1316@gmail.com</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant opacity-75">© 2024 RNS Finance. All rights reserved.</p>
+</footer>
+<!-- Help FAB -->
+<button class="fixed bottom-6 right-6 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform z-40">
+<span class="material-symbols-outlined" data-icon="support_agent" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</button>
+</body></html>

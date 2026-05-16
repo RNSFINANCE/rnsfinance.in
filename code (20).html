@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="light" lang="hi-IN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RNS Finance - Professional and Secure Loans</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "outline": "#737780",
+                    "on-surface-variant": "#43474f",
+                    "tertiary-fixed-dim": "#66df75",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "secondary": "#735c00",
+                    "on-secondary-fixed": "#241a00",
+                    "background": "#f8f9fa",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-dim": "#d9dadb",
+                    "outline-variant": "#c3c6d1",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "on-primary-container": "#799dd6",
+                    "on-tertiary-fixed": "#002106",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary-container": "#745c00",
+                    "surface-container": "#edeeef",
+                    "error": "#ba1a1a",
+                    "primary-container": "#003366",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-fixed-variant": "#00531a",
+                    "inverse-primary": "#a7c8ff",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface": "#191c1d",
+                    "primary": "#001e40",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#3a5f94",
+                    "tertiary-fixed": "#83fc8e",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-container": "#36b24e",
+                    "tertiary-container": "#003d11",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary": "#002507",
+                    "surface-variant": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max-width": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter h-16 max-w-container-max-width mx-auto bg-surface shadow-sm">
+<div class="text-headline-md font-headline-md font-bold text-primary">RNS Finance</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Tracking</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Support</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</button>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Apply Now</button>
+</div>
+</nav>
+<main class="flex-grow pt-16">
+<!-- Hero Section -->
+<section class="relative w-full py-24 px-gutter overflow-hidden bg-surface-container-lowest">
+<div class="max-w-container-max-width mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-6">
+                        विश्वसनीय और सुरक्षित | Trusted &amp; Secure
+                    </span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6 leading-tight">
+                        Professional and Secure Loans for your <span class="text-on-primary-container">Future</span>.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                        आसान और सुरक्षित ऋण प्रक्रिया। हम आपकी वित्तीय जरूरतों को समझते हैं और उन्हें पूरा करने के लिए व्यक्तिगत और व्यावसायिक ऋण समाधान प्रदान करते हैं।
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                            Apply for Finance <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+                            Check Eligibility
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-surface-container">
+<img alt="Financial consultation" class="w-full h-full object-cover" data-alt="A professional financial advisor in a crisp white shirt shaking hands with a smiling client in a bright, modern corporate office. The setting is filled with natural sunlight, minimalist furniture, and large windows overlooking a city skyline. The atmosphere is warm, professional, and secure, utilizing a palette of deep blues and soft greys to convey trust and financial stability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Em82w-3j7j7GBVbuIVFOAhTPUB1XXCLzwJLSbJkRjavf66qZLmi9bw-FUEyPZjCpJFpgolp4vWMkCAst54wp3oRZ7yIVX1ZtaVokxiJG_qxAhlPPe8tTHjx51SBPH0aU6n9rvUxhRX2RRclromryijlodPAajiR94HIyW9xFEhCFBz3dGWspcRxUJtGNdXJbrkPsMen2mvtSIspZXsHy2WNOl40i1nsMNw25PVwg-TEQTADx0bZCynJ9M8DvpHhuIknuUJAz4g"/>
+</div>
+<!-- Floating Card -->
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-outline-variant max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md text-primary">Secure Process</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your data is encrypted with enterprise-level security protocols.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 px-gutter bg-surface">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">हमारी सेवाएँ | Our Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored financial solutions for every milestone.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Personal Loan -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group">
+<div class="w-14 h-14 bg-primary-container text-on-primary-container rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="person">person</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Personal Finance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">व्यक्तिगत जरूरतों के लिए तत्काल ऋण। Easy EMIs and minimal documentation for your personal needs.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Business Loan -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="business_center">business_center</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Business Finance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">अपने व्यवसाय को नई ऊंचाइयों पर ले जाएं। Fuel your enterprise with flexible capital and competitive ROI.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- EMI Tracking -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group">
+<div class="w-14 h-14 bg-primary-container text-on-primary-container rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="payments">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">EMI Tracking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">अपने भुगतानों पर नज़र रखें। Real-time dashboard to monitor your repayment schedule and history.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Check EMI <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Simple Process Section -->
+<section class="py-24 px-gutter bg-surface-container-lowest">
+<div class="max-w-container-max-width mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 leading-tight">सरल 3-चरण प्रक्रिया<br/>Simple 3-Step Process</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Online Application</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Fill out our secure digital form in under 5 minutes. No physical visits required initially.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Quick Verification</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Our team reviews your documents using automated secure systems for rapid approval.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Instant Disbursal</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Receive funds directly in your bank account once the final agreement is digitally signed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="bg-primary text-on-primary p-6 rounded-2xl shadow-lg">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+<h5 class="font-label-md text-label-md mb-2">High Security</h5>
+<p class="text-xs opacity-80">256-bit encryption for all your transactions.</p>
+</div>
+<div class="bg-surface-container-high p-6 rounded-2xl">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary" data-icon="history">history</span>
+<h5 class="font-label-md text-label-md text-primary mb-2">24/7 Tracking</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitor your loan status anytime, anywhere.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-secondary-container p-6 rounded-2xl shadow-sm">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary" data-icon="support_agent">support_agent</span>
+<h5 class="font-label-md text-label-md text-secondary mb-2">Expert Support</h5>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Dedicated managers for personalized assistance.</p>
+</div>
+<div class="bg-primary-container p-6 rounded-2xl shadow-lg">
+<span class="material-symbols-outlined text-4xl mb-4 text-on-primary-container" data-icon="verified_user">verified_user</span>
+<h5 class="font-label-md text-label-md text-on-primary-container mb-2">RBI Compliant</h5>
+<p class="text-xs text-on-primary-container opacity-80">Follows all regulatory financial guidelines.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-gutter bg-primary">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">अपना वित्तीय सफर आज ही शुरू करें</h2>
+<p class="font-body-lg text-body-lg text-on-primary opacity-90 mb-10">Start your financial journey with RNS Finance today and experience hassle-free lending.</p>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-label-md text-label-md font-bold shadow-xl hover:scale-105 transition-transform">
+                    Apply Now For Finance
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section class="py-24 px-gutter bg-surface-container-low">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">क्या कहते हैं हमारे ग्राहक | What Our Clients Say</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Join thousands of satisfied customers who achieved their dreams with RNS Finance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary">Rajesh Kumar</h5>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"RNS Finance made the loan process incredibly simple. I received my business loan in just 3 days with minimal paperwork. Highly recommended!"</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-secondary" data-icon="person">person</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary">Anjali Sharma</h5>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"The EMI tracking feature is a lifesaver. I always know my payment schedule, and the customer support team is always ready to help with any questions."</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary">Vikram Singh</h5>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"Professional, secure, and transparent. I applied for a personal loan and was impressed by the quick digital verification process. Great experience!"</p>
+</div>
+<!-- Testimonial 4 -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary">Rahul Verma</h5>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"RNS Finance makes the whole loan process so transparent. The digital signature feature is a game changer. Very impressed with the speed of approval!"</p>
+</div>
+<!-- Testimonial 5 -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-secondary" data-icon="person">person</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary">Meera Reddy</h5>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"I was looking for a business loan and the team at RNS Finance guided me perfectly. The EMI tracking portal is very helpful for my monthly planning."</p>
+</div></div>
+</div>
+</section><footer class="w-full py-12 px-gutter mt-auto flex flex-col items-center gap-8 text-center bg-surface-container-highest">
+<div class="max-w-container-max-width w-full grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+<div>
+<div class="text-label-md font-label-md font-bold text-primary mb-4">RNS Finance</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+                    Your trusted partner in growth, providing secure and professional financial solutions since 2024.
+                </p>
+</div>
+<div>
+<div class="text-label-md font-label-md font-bold text-primary mb-4">Quick Links</div>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Loan Calculator</a></li>
+</ul>
+</div>
+<div>
+<div class="text-label-md font-label-md font-bold text-primary mb-4">Contact Information</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="location_on">location_on</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sikta Kubersthan Padrauna Kushinagar Uttar Pradesh 27303</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="call">call</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">7668273774</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="mail">mail</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">rnsgpl1316@gmail.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="w-full pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 RNS Finance. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="help">help</span></a>
+</div>
+</div>
+</footer>
+</body></html>
